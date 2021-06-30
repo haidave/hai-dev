@@ -2,8 +2,33 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+// styles
+import { createGlobalStyle, ThemeProvider } from "styled-components"
+import { normalize } from "styled-normalize"
+
+// components
 import Header from "./Header"
-import "../styles/layout.css"
+
+const GlobalStyle = createGlobalStyle`
+${normalize}
+  * {
+    text-decoration: none;
+    /* cursor: none; */
+  }
+
+  html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+  }
+
+  body {
+    font-family: "League Spartan", sans-serif;
+    background-color: ${props => props.theme.background};
+    overscroll-behavior: none;
+    overflow-x: hidden;
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -16,28 +41,24 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const darkTheme = {
+    background: "#000000",
+    text: "#ffffff",
+    red: "#ea291e",
+  }
+
+  const lightTheme = {
+    background: "#ffffff",
+    text: "#000000",
+    red: "#ea291e",
+  }
+
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <ThemeProvider theme={lightTheme}>
+      <GlobalStyle />
+      <Header />
+      <main>{children}</main>
+    </ThemeProvider>
   )
 }
 
