@@ -10,10 +10,7 @@ import { normalize } from "styled-normalize"
 import Header from "./Header"
 
 // context
-import {
-  useGlobalDispatchContext,
-  useGlobalStateContext,
-} from "../context/globalContext"
+import { useGlobalStateContext } from "../context/globalContext"
 
 const GlobalStyle = createGlobalStyle`
 ${normalize}
