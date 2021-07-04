@@ -19,7 +19,6 @@ import {
 const GlobalStyle = createGlobalStyle`
 ${normalize}
   * {
-    height: 100%;
     text-decoration: none;
     cursor: none;
   }
@@ -31,6 +30,7 @@ ${normalize}
   }
 
   body {
+    height: 100%;
     font-family: "League Spartan", sans-serif;
     background-color: ${props => props.theme.background};
     overscroll-behavior: none;
