@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 
 export const Container = styled.div`
   position: relative;
@@ -34,6 +34,12 @@ export const Flex = styled.div`
   align-items: center;
 
   ${props =>
+    props.centered &&
+    css`
+      justify-content: center;
+    `}
+
+  ${props =>
     props.spaceBetween &&
     css`
       justify-content: space-between;
@@ -49,6 +55,13 @@ export const Flex = styled.div`
     props.alignTop &&
     css`
       align-items: top;
+    `}
+
+    ${props =>
+    props.fullWidthHeight &&
+    css`
+      width: 100%;
+      height: 100%;
     `}
 
     ${props =>
@@ -82,5 +95,62 @@ export const Cursor = styled.div`
 
   &.pointer {
     border: 4px solid ${props => props.theme.text};
+  }
+`
+
+const showText = () =>
+  keyframes`
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  `
+
+const animateText = keyframes`
+  0% {
+    left: 0;
+    width: 0;
+  }
+
+  50% {
+    left: 0;
+    width: 100%;
+  }
+
+  100% {
+    left: 102%;
+    width: 1%;
+  }
+`
+
+const blink = keyframes`
+  50% {
+      background-color: transparent;
+    }
+`
+
+export const TextAnimation = styled.span`
+  position: relative;
+  display: inline;
+
+  span {
+    opacity: 0;
+    animation: 0.0001s linear 0.5s 1 normal forwards running ${showText};
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10%; // to be visually centered
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    background-color: ${props => props.theme.text};
+    animation: 1s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal forwards running
+        ${animateText},
+      ${blink} 0.5s steps(1) infinite 1.25s alternate;
   }
 `
