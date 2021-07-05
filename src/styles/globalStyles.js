@@ -96,6 +96,10 @@ export const Cursor = styled.div`
   &.pointer {
     border: 4px solid ${props => props.theme.text};
   }
+
+  &.nav-open {
+    background: ${props => props.theme.text};
+  }
 `
 
 const showText = () =>
@@ -108,7 +112,7 @@ const showText = () =>
     }
   `
 
-const animateText = keyframes`
+const animateTextWithCursor = keyframes`
   0% {
     left: 0;
     width: 0;
@@ -125,6 +129,23 @@ const animateText = keyframes`
   }
 `
 
+const animateText = keyframes`
+  0% {
+    left: 0;
+    width: 0;
+  }
+
+  50% {
+    left: 0;
+    width: 100%;
+  }
+
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+`
+
 const blink = keyframes`
   50% {
       background-color: transparent;
@@ -133,7 +154,7 @@ const blink = keyframes`
 
 export const TextAnimation = styled.span`
   position: relative;
-  display: inline;
+  display: inline-block;
 
   span {
     opacity: 0;
@@ -150,7 +171,14 @@ export const TextAnimation = styled.span`
     height: 100%;
     background-color: ${props => props.theme.text};
     animation: 1s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal forwards running
-        ${animateText},
-      ${blink} 0.5s steps(1) infinite 1.25s alternate;
+      ${animateText};
+
+    ${props =>
+      props.cursorAnimation &&
+      css`
+        animation: 1s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal forwards
+            running ${animateTextWithCursor},
+          ${blink} 0.5s steps(1) infinite 1.25s alternate;
+      `}
   }
 `

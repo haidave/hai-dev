@@ -1,7 +1,7 @@
 import React from "react"
 
 // styles
-import { IntroWrapper, IntroTitle } from "../styles/introStyles"
+import { IntroWrapper, IntroTitle, IntroArrow } from "../styles/introStyles"
 import { Flex, TextAnimation } from "../styles/globalStyles"
 
 const Intro = () => {
@@ -9,7 +9,7 @@ const Intro = () => {
     <IntroWrapper>
       <Flex centered fullWidthHeight>
         <IntroTitle>
-          <TextAnimation>
+          <TextAnimation cursorAnimation>
             <span>the frontend developer</span>
           </TextAnimation>
         </IntroTitle>

@@ -16,6 +16,7 @@ export const Logo = styled.div`
     font-size: 1.8rem;
     font-weight: 800;
     color: ${props => props.theme.text};
+    user-select: none;
   }
 
   span {
