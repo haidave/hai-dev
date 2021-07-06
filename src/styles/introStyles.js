@@ -8,7 +8,7 @@ export const IntroWrapper = styled.div`
 `
 
 export const IntroTitle = styled.div`
-  /* font-family: Arial, sans-serif; */
-  font-size: 4rem;
+  font-size: 6rem;
+  font-weight: 700;
   text-align: center;
 `

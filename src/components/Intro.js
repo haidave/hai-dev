@@ -1,7 +1,7 @@
 import React from "react"
 
 // styles
-import { IntroWrapper, IntroTitle, IntroArrow } from "../styles/introStyles"
+import { IntroWrapper, IntroTitle } from "../styles/introStyles"
 import { Flex, TextAnimation } from "../styles/globalStyles"
 
 const Intro = () => {

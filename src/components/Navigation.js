@@ -13,9 +13,9 @@ import {
 } from "../styles/navigationStyles"
 
 const navRoutes = [
-  { id: 0, title: "projects", path: "/projects" },
-  { id: 1, title: "about me", path: "/about-me" },
-  { id: 2, title: "contact", path: "/contact" },
+  { id: 0, title: "about me", path: "#about-me" },
+  { id: 1, title: "projects", path: "#projects" },
+  // { id: 2, title: "contact", path: "#contact" },
 ]
 
 function Navigation({ toggleMenu, setToggleMenu, onCursor }) {
@@ -24,12 +24,11 @@ function Navigation({ toggleMenu, setToggleMenu, onCursor }) {
       <AnimatePresence>
         {toggleMenu && (
           <Nav
-            initial={{ x: "100%" }}
-            animate={{ x: toggleMenu ? 0 : "100%" }}
-            exit={{ x: "100%" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: toggleMenu ? 1 : 0 }}
+            exit={{ opacity: 0 }}
             transition={{
-              duration: 0.8,
-              ease: [0.6, 0.05, -0.01, 0.9],
+              duration: 0.25,
             }}
           >
             <Container>

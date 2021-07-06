@@ -34,6 +34,12 @@ export const Flex = styled.div`
   align-items: center;
 
   ${props =>
+    props.directionColumn &&
+    css`
+      flex-direction: column;
+    `}
+
+  ${props =>
     props.centered &&
     css`
       justify-content: center;

@@ -23,6 +23,7 @@ ${normalize}
   * {
     text-decoration: none;
     cursor: none;
+    scroll-behavior: smooth;
   }
 
   html {
