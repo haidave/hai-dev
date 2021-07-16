@@ -1,67 +1,16 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 // styled components
-import { HeaderNav, Logo, Menu } from "../styles/headerStyles"
-import { Container, Flex } from "../styles/globalStyles"
+import { HeaderWrapper, HeaderLogo } from "@styles/headerStyles"
 
-// context
-import {
-  useGlobalStateContext,
-  useGlobalDispatchContext,
-} from "../context/globalContext"
-
-function Header({ onCursor, toggleMenu, setToggleMenu }) {
-  const dispatch = useGlobalDispatchContext()
-  const { currentTheme } = useGlobalStateContext()
-
-  const toggleTheme = () => {
-    if (currentTheme === "dark") {
-      dispatch({ type: "TOGGLE_THEME", theme: "light" })
-    } else {
-      dispatch({ type: "TOGGLE_THEME", theme: "dark" })
-    }
-  }
-
-  useEffect(() => {
-    window.localStorage.setItem("theme", currentTheme)
-  }, [currentTheme])
+function Header() {
   return (
-    <HeaderNav
-      animate={{ y: 0, opacity: 1 }}
-      initial={{ y: -72, opacity: 0 }}
-      transition={{ duration: 1, ease: [0.6, 0.05, -0.01, 0.9] }}
-    >
-      <Container>
-        <Flex spaceBetween noHeight>
-          <Logo>
-            <Link
-              to="/"
-              onMouseEnter={() => onCursor("hovered")}
-              onMouseLeave={onCursor}
-            >
-              hai
-            </Link>
-            <span
-              onClick={toggleTheme}
-              onMouseEnter={() => onCursor("pointer")}
-              onMouseLeave={onCursor}
-            ></span>
-          </Logo>
-
-          <Menu
-            onClick={() => setToggleMenu(!toggleMenu)}
-            onMouseEnter={() => onCursor("hovered")}
-            onMouseLeave={onCursor}
-          >
-            <button>
-              <span></span>
-              <span></span>
-            </button>
-          </Menu>
-        </Flex>
-      </Container>
-    </HeaderNav>
+    <HeaderWrapper>
+      <HeaderLogo>
+        <Link to="/">H</Link>
+      </HeaderLogo>
+    </HeaderWrapper>
   )
 }
 
