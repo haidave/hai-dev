@@ -21,10 +21,11 @@ import SwiperCore, {
   Mousewheel,
   Keyboard,
   Pagination,
+  HashNavigation,
 } from "swiper"
 
 // install Swiper modules
-SwiperCore.use([EffectFade, Mousewheel, Keyboard, Pagination])
+SwiperCore.use([EffectFade, Mousewheel, Keyboard, Pagination, HashNavigation])
 
 const pagination = {
   clickable: true,
@@ -56,26 +57,27 @@ const IndexPage = () => (
             shortSwipes: false,
           },
         }}
-        onSlideChange={swiperCore => {
-          const {
-            activeIndex,
-            snapIndex,
-            previousIndex,
-            realIndex,
-          } = swiperCore
-          console.log({ activeIndex, snapIndex, previousIndex, realIndex })
-        }}
-        watchSlidesProgress={true}
-        watchSlidesVisibility={true}
+        // onSlideChange={swiperCore => {
+        //   const {
+        //     activeIndex,
+        //     snapIndex,
+        //     previousIndex,
+        //     realIndex,
+        //   } = swiperCore
+        //   console.log({ activeIndex, snapIndex, previousIndex, realIndex })
+        // }}
+        // watchSlidesProgress={true}
+        // watchSlidesVisibility={true}
+        hashNavigation={true}
       >
-        <SwiperSlide>
+        <SwiperSlide data-hash="welcome">
           <Intro />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide data-hash="about-me">
           <AboutMe />
         </SwiperSlide>
-        <SwiperSlide>
-          <Intro />
+        <SwiperSlide data-hash="projects">
+          <Projects />
         </SwiperSlide>
         <SwiperSlide>
           <AboutMe />

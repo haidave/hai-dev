@@ -13,9 +13,7 @@ import {
   IntroDescription,
 } from "@styles/introStyles"
 
-const Intro = ({ onSlideChange }) => {
-  console.log(onSlideChange)
-
+const Intro = () => {
   return (
     <Section>
       <SectionTitle index={"01"} name={"Welcome"} />

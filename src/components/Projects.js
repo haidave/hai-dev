@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 // styles
-import { Flex, Container } from "../styles/globalStyles"
 import { ProjectsSection } from "../styles/projectsStyles"
 import {
   ProjectWrapper,
@@ -48,8 +47,6 @@ function Projects() {
 
   const projects = data.allMarkdownRemark.nodes
 
-  console.log(projects)
-
   const animation = useAnimation()
   const [contentRef, inView] = useInView({
     triggerOnce: true,
@@ -79,39 +76,35 @@ function Projects() {
         },
       }}
     >
-      <Container>
-        <Flex directionColumn centered>
-          <h2>projects I worked on</h2>
-          <div>
-            {projects.map(project => (
-              <ProjectWrapper key={project.id}>
-                <ProjectContent className="project__content">
-                  <ProjectTitle>{project.frontmatter.title}</ProjectTitle>
-                  <ProjectDescription>
-                    {project.frontmatter.description}
-                  </ProjectDescription>
-                  <ProjectStack className="project__stack">
-                    {project.frontmatter.stack}
-                  </ProjectStack>
-                  <ProjectLink className="project__link">
-                    {project.frontmatter.link}
-                  </ProjectLink>
-                </ProjectContent>
+      <h2>projects I worked on</h2>
+      <div>
+        {projects.map(project => (
+          <ProjectWrapper key={project.id}>
+            <ProjectContent className="project__content">
+              <ProjectTitle>{project.frontmatter.title}</ProjectTitle>
+              <ProjectDescription>
+                {project.frontmatter.description}
+              </ProjectDescription>
+              <ProjectStack className="project__stack">
+                {project.frontmatter.stack}
+              </ProjectStack>
+              <ProjectLink className="project__link">
+                {project.frontmatter.link}
+              </ProjectLink>
+            </ProjectContent>
 
-                <ProjectImage className="project__image-wrapper">
-                  <GatsbyImage
-                    image={getImage(
-                      project.frontmatter.image.childImageSharp.gatsbyImageData
-                    )}
-                    alt="Project image"
-                    className="project__image"
-                  />
-                </ProjectImage>
-              </ProjectWrapper>
-            ))}
-          </div>
-        </Flex>
-      </Container>
+            <ProjectImage className="project__image-wrapper">
+              <GatsbyImage
+                image={getImage(
+                  project.frontmatter.image.childImageSharp.gatsbyImageData
+                )}
+                alt="Project image"
+                className="project__image"
+              />
+            </ProjectImage>
+          </ProjectWrapper>
+        ))}
+      </div>
     </ProjectsSection>
   )
 }

@@ -73,7 +73,7 @@ const About = () => {
                 Yeah and I can speak Czech, English and Vietnamese.
               </AboutMeText>
 
-              <Button to="/">Back</Button>
+              <Button to="/#about-me">Back</Button>
             </AboutMeSection>
           </SectionContent>
         </Section>
