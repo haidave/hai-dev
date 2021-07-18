@@ -6,31 +6,33 @@ import SectionTitle from "@components/SectionTitle"
 // styles
 import { Section, SectionContent } from "@styles/GlobalStyle"
 import {
-  IntroWrapper,
+  IntroSection,
   IntroPronunciation,
   IntroTitle,
   IntroDivider,
   IntroDescription,
 } from "@styles/introStyles"
 
-const Intro = () => {
+const Intro = ({ onSlideChange }) => {
+  console.log(onSlideChange)
+
   return (
     <Section>
       <SectionTitle index={"01"} name={"Welcome"} />
       <SectionContent>
-        <IntroWrapper>
-          <IntroPronunciation className="swiper-no-swiping">
+        <IntroSection className="swiper-no-swiping">
+          <IntroPronunciation>
             <span>/haːj˧˩/ /ŋwiən˦ˀ˥/</span>
             <span>/deɪv/</span>
           </IntroPronunciation>
-          <IntroTitle className="swiper-no-swiping">
+          <IntroTitle animate={{ y: 0 }} initial="{{y: 100}}">
             Hai Nguyen / <span>Dave</span>
           </IntroTitle>
           <IntroDivider />
-          <IntroDescription className="swiper-no-swiping">
+          <IntroDescription>
             The frontend developer based in Prague
           </IntroDescription>
-        </IntroWrapper>
+        </IntroSection>
       </SectionContent>
     </Section>
   )

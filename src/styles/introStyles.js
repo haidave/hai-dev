@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-export const IntroWrapper = styled.div`
+export const IntroSection = styled.section`
   display: flex;
   flex-direction: column;
 `
@@ -20,7 +21,7 @@ export const IntroPronunciation = styled.p`
   }
 `
 
-export const IntroTitle = styled.h1`
+export const IntroTitle = styled(motion.h1)`
   margin-top: 1rem;
   font-size: 36px;
   font-weight: 600;
@@ -39,14 +40,14 @@ export const IntroTitle = styled.h1`
   }
 `
 
-export const IntroDivider = styled.div`
+export const IntroDivider = styled(motion.div)`
   margin-top: 1rem;
   width: 10%;
   height: 6px;
   background-color: var(--color-red);
 `
 
-export const IntroDescription = styled.p`
+export const IntroDescription = styled(motion.p)`
   margin-top: 2rem;
   font-family: var(--font-blender-pro);
   font-size: 18px;

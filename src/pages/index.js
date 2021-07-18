@@ -6,11 +6,14 @@ import Layout from "@components/Layout"
 import Seo from "@components/seo"
 import Intro from "@components/Intro"
 import AboutMe from "@components/AboutMe"
+import Projects from "@components/Projects"
+
+// styles
+import { Wrapper } from "@styles/wrapperStyles"
 
 // import Swiper styles
 import "swiper/swiper.min.css"
 import "@styles/custom-swiper.scss"
-import { SwiperWrapper } from "@styles/swiperWrapperStyles"
 
 // import Swiper core and required modules
 import SwiperCore, {
@@ -33,7 +36,7 @@ const pagination = {
 const IndexPage = () => (
   <Layout>
     <Seo title="home" />
-    <SwiperWrapper>
+    <Wrapper>
       <Swiper
         effect={"fade"}
         fadeEffect={{
@@ -53,6 +56,17 @@ const IndexPage = () => (
             shortSwipes: false,
           },
         }}
+        onSlideChange={swiperCore => {
+          const {
+            activeIndex,
+            snapIndex,
+            previousIndex,
+            realIndex,
+          } = swiperCore
+          console.log({ activeIndex, snapIndex, previousIndex, realIndex })
+        }}
+        watchSlidesProgress={true}
+        watchSlidesVisibility={true}
       >
         <SwiperSlide>
           <Intro />
@@ -67,7 +81,7 @@ const IndexPage = () => (
           <AboutMe />
         </SwiperSlide>
       </Swiper>
-    </SwiperWrapper>
+    </Wrapper>
   </Layout>
 )
 

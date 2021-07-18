@@ -3,6 +3,8 @@ import { normalize } from "styled-normalize"
 import fonts from "./fonts"
 import variables from "./variables"
 
+import { Link } from "gatsby"
+
 const GlobalStyle = createGlobalStyle`
   ${normalize}
   ${fonts}
@@ -134,4 +136,24 @@ export const SectionContent = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
+`
+export const Button = styled(Link)`
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 15px 30px;
+  background-color: var(--color-white);
+  color: var(--color-dark-blue);
+  border: 1px solid transparent;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out,
+    border-color 0.25s ease-out;
+  will-change: background-color, color, border-color;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+  }
 `

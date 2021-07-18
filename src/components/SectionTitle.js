@@ -9,11 +9,9 @@ import {
 
 function SectionTitle({ index, name }) {
   return (
-    <SectionTitleWrapper>
-      <SectionTitleIndex className="swiper-no-swiping">
-        {index}
-      </SectionTitleIndex>
-      <SectionTitleText className="swiper-no-swiping">{name}</SectionTitleText>
+    <SectionTitleWrapper className="swiper-no-swiping">
+      <SectionTitleIndex>{index}</SectionTitleIndex>
+      <SectionTitleText>{name}</SectionTitleText>
     </SectionTitleWrapper>
   )
 }
