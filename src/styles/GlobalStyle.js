@@ -145,7 +145,7 @@ export const SectionContent = styled.div`
       justify-content: center;
     `}
 `
-export const Button = styled(Link)`
+export const StyledLink = styled(Link)`
   display: inline-flex;
   align-self: flex-start;
   align-items: center;
@@ -164,4 +164,52 @@ export const Button = styled(Link)`
     color: var(--color-white);
     border-color: var(--color-white);
   }
+`
+
+export const Button = styled.a`
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 15px 30px;
+  background-color: var(--color-white);
+  color: var(--color-dark-blue);
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  z-index: 50;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out,
+    border-color 0.25s ease-out;
+  will-change: background-color, color, border-color;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+  }
+
+  &:first-child {
+    margin-right: 1.5rem;
+  }
+
+  ${props =>
+    props.secondary &&
+    css`
+      border: 1px solid var(--color-white);
+      background-color: transparent;
+      color: var(--color-white);
+
+      &:hover {
+        background-color: var(--color-red);
+        border-color: var(--color-red);
+      }
+    `}
+`
+
+export const Divider = styled.div`
+  margin-top: 1rem;
+  width: 10%;
+  height: 6px;
+  background-color: var(--color-red);
 `

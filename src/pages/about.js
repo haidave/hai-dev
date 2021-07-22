@@ -7,7 +7,7 @@ import Seo from "@components/seo"
 import SectionTitle from "@components/SectionTitle"
 
 // styles
-import { Section, SectionContent, Button } from "@styles/GlobalStyle"
+import { Section, SectionContent, StyledLink } from "@styles/GlobalStyle"
 import { Wrapper } from "@styles/wrapperStyles"
 import {
   AboutMeSection,
@@ -95,7 +95,7 @@ const About = () => {
                     Yeah and I can speak Czech, English and Vietnamese.
                   </AboutMeText>
 
-                  <Button to="/#about-me">Back</Button>
+                  <StyledLink to="/#about-me">Back</StyledLink>
                 </AboutMeSection>
               </SectionContent>
             </Section>

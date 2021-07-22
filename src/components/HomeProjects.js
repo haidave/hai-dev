@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import SectionTitle from "@components/SectionTitle"
 
 // styles
-import { Section, SectionContent, Button } from "@styles/GlobalStyle"
+import { Section, SectionContent, StyledLink } from "@styles/GlobalStyle"
 import {
   HomeProjectsSection,
   HomeProjectsGrid,
@@ -88,7 +88,7 @@ const HomeProjects = () => {
           </HomeProjectsGrid>
         </HomeProjectsSection>
         <HomeProjectsButton>
-          <Button to="/projects">More projects</Button>
+          <StyledLink to="/projects">More projects</StyledLink>
         </HomeProjectsButton>
       </SectionContent>
     </Section>

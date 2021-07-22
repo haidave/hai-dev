@@ -40,13 +40,6 @@ export const IntroTitle = styled(motion.h1)`
   }
 `
 
-export const IntroDivider = styled(motion.div)`
-  margin-top: 1rem;
-  width: 10%;
-  height: 6px;
-  background-color: var(--color-red);
-`
-
 export const IntroDescription = styled(motion.p)`
   margin-top: 2rem;
   font-family: var(--font-blender-pro);

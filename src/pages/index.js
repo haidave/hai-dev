@@ -7,6 +7,7 @@ import Seo from "@components/seo"
 import Intro from "@components/Intro"
 import HomeAbout from "@components/HomeAbout"
 import HomeProjects from "@components/HomeProjects"
+import HomeContact from "@components/HomeContact"
 
 // styles
 import { Wrapper } from "@styles/wrapperStyles"
@@ -79,9 +80,9 @@ const IndexPage = () => (
         <SwiperSlide data-hash="projects">
           <HomeProjects />
         </SwiperSlide>
-        {/* <SwiperSlide>
-          <Intro />
-        </SwiperSlide> */}
+        <SwiperSlide data-hash="contact">
+          <HomeContact />
+        </SwiperSlide>
       </Swiper>
     </Wrapper>
   </Layout>

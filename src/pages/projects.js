@@ -9,7 +9,7 @@ import Seo from "@components/seo"
 import SectionTitle from "@components/SectionTitle"
 
 // styles
-import { Section, SectionContent, Button } from "@styles/GlobalStyle"
+import { Section, SectionContent, StyledLink } from "@styles/GlobalStyle"
 import { Wrapper } from "@styles/wrapperStyles"
 import {
   HomeProjectsSection,
@@ -110,7 +110,7 @@ const Projects = ({ data }) => {
                       </HomeProjectsGridItem>
                     ))}
                   </HomeProjectsGrid>
-                  <Button to="/#projects">Back</Button>
+                  <StyledLink to="/#projects">Back</StyledLink>
                 </HomeProjectsSection>
               </SectionContent>
             </Section>

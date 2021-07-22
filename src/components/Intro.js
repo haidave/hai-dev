@@ -4,12 +4,11 @@ import React from "react"
 import SectionTitle from "@components/SectionTitle"
 
 // styles
-import { Section, SectionContent } from "@styles/GlobalStyle"
+import { Section, SectionContent, Divider } from "@styles/GlobalStyle"
 import {
   IntroSection,
   IntroPronunciation,
   IntroTitle,
-  IntroDivider,
   IntroDescription,
 } from "@styles/introStyles"
 
@@ -26,7 +25,7 @@ const Intro = () => {
           <IntroTitle animate={{ y: 0 }} initial="{{y: 100}}">
             Hai Nguyen / <span>Dave</span>
           </IntroTitle>
-          <IntroDivider />
+          <Divider />
           <IntroDescription>
             The frontend developer based in Prague
           </IntroDescription>
