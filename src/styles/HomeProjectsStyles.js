@@ -37,6 +37,8 @@ export const HomeProjectLink = styled.a`
   padding: 15px 30px;
   border: 1px solid var(--color-white);
   color: var(--color-white);
+  text-align: center;
+  white-space: nowrap;
   opacity: 0;
   z-index: 50;
   transition: opacity 0.5s cubic-bezier(0.4, 0.25, 0, 1);
