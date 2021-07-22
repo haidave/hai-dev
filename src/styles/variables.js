@@ -5,6 +5,7 @@ const variables = css`
     --color-black: #000000;
     --color-white: #ffffff;
     --color-blue-dark: #160a2e;
+    --color-blue-dark-opacity: rgba(#160a2e, 0.5);
     --color-red: #f33c29;
     --color-gray: rgba(68, 58, 87, 0.28);
     --color-gray-light: rgba(152, 139, 176, 0.4);

@@ -11,7 +11,7 @@ import {
   AboutMeStack,
 } from "@styles/aboutMeStyles"
 
-const AboutMe = () => {
+const HomeAbout = () => {
   return (
     <Section>
       <SectionTitle index={"02"} name={"About me"} />
@@ -23,11 +23,18 @@ const AboutMe = () => {
           </AboutMeText>
           <AboutMeText>
             I'm currently working at Isobar Czech Republic and I'm{" "}
-            <strong>in charge of campaign assets</strong> such as dynamic
-            banners and newsletters. I also build websites in{" "}
-            <strong>Vue/Nuxt</strong>. After work I have been{" "}
-            <strong>learning React</strong> to further my skills. For example I
-            built this portfolio in <strong>Gatsby</strong>.
+            <strong>in charge of campaign assets</strong> such as{" "}
+            <a
+              href="https://mam.cz/zpravy/2021-05/metrozoom-vytvoril-pro-sazkabet-prvni-dynamickou-ooh-reklamu-v-cesku/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              dynamic banners
+            </a>{" "}
+            and newsletters. I also build websites in <strong>Vue/Nuxt</strong>.
+            After work I have been <strong>learning React</strong> to further my
+            skills. For example I built this portfolio in{" "}
+            <strong>Gatsby</strong>.
           </AboutMeText>
           <AboutMeText>
             <strong>Right now I'm looking for a new job!</strong>
@@ -52,4 +59,4 @@ const AboutMe = () => {
   )
 }
 
-export default AboutMe
+export default HomeAbout

@@ -20,6 +20,14 @@ export const AboutMeText = styled(motion.div)`
     font-weight: 700;
   }
 
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   @media screen and (min-width: 700px) {
     font-size: 1.5rem;
   }
@@ -37,8 +45,10 @@ export const AboutMeStack = styled.ul`
   padding: 0px;
   overflow: hidden;
   list-style: none;
+  font-family: var(--font-arame);
+  font-size: 1.25rem;
   color: var(--color-white);
-  font-weight: 700;
+  font-weight: 600;
   text-align: left;
 
   @media screen and (min-width: 1920px) {
@@ -60,6 +70,7 @@ export const AboutMeStack = styled.ul`
   }
 
   p {
+    font-family: var(--font-blender-pro);
     font-size: 1rem;
     font-weight: 400;
     font-style: italic;

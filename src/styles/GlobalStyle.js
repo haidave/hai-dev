@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle, css } from "styled-components"
 import { normalize } from "styled-normalize"
 import fonts from "./fonts"
 import variables from "./variables"
@@ -82,7 +82,7 @@ export const Section = styled.section`
   position: relative;
   padding-right: 100px;
   padding-left: 100px;
-  width: calc(100% - 300px - 70px);
+  width: calc(100% - 270px);
   height: 100%;
   z-index: 2;
 `
@@ -136,6 +136,14 @@ export const SectionContent = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
+
+  ${props =>
+    props.column &&
+    css`
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    `}
 `
 export const Button = styled(Link)`
   display: inline-flex;

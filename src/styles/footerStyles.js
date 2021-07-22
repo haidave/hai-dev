@@ -9,8 +9,8 @@ export const FooterWrapper = styled.header`
   margin-left: 100px;
   padding-right: 100px;
   padding-left: 100px;
-  width: calc(100% - 300px - 70px);
-  background-color: transparent;
+  width: calc(100% - 370px);
+  background-color: var(--color-background);
   color: var(--color-white);
   z-index: 199;
 `

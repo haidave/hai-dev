@@ -1,8 +1,8 @@
 ---
-id: 3
+id: 4
 title: Skautská jurta
-description: Charity website for Czech Scouts to raise money for the construction of the Scout Yurt. My first website ever!
-stack: HTML, CSS, Javascript, GSAP
+description: Charity website for Czech Scouts.
+stack: HTML/CSS/JS, GSAP
 link: https://skautskajurta.cz/
-image: ../images/projects/skautska-jurta.png
+image: ../images/projects/skautska-jurta.jpg
 ---

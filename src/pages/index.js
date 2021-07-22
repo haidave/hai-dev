@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import Layout from "@components/Layout"
 import Seo from "@components/seo"
 import Intro from "@components/Intro"
-import AboutMe from "@components/AboutMe"
-import Projects from "@components/Projects"
+import HomeAbout from "@components/HomeAbout"
+import HomeProjects from "@components/HomeProjects"
 
 // styles
 import { Wrapper } from "@styles/wrapperStyles"
@@ -74,14 +74,14 @@ const IndexPage = () => (
           <Intro />
         </SwiperSlide>
         <SwiperSlide data-hash="about-me">
-          <AboutMe />
+          <HomeAbout />
         </SwiperSlide>
         <SwiperSlide data-hash="projects">
-          <Projects />
+          <HomeProjects />
         </SwiperSlide>
-        <SwiperSlide>
-          <AboutMe />
-        </SwiperSlide>
+        {/* <SwiperSlide>
+          <Intro />
+        </SwiperSlide> */}
       </Swiper>
     </Wrapper>
   </Layout>
