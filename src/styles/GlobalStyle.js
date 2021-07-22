@@ -85,6 +85,11 @@ export const Section = styled.section`
   width: calc(100% - 270px);
   height: 100%;
   z-index: 2;
+
+  @media screen and (min-width: 1920px) {
+    margin: 0 auto;
+    width: 1550px;
+  }
 `
 
 export const SectionTitleWrapper = styled.div`

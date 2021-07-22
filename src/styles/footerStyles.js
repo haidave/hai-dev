@@ -13,6 +13,13 @@ export const FooterWrapper = styled.header`
   background-color: var(--color-background);
   color: var(--color-white);
   z-index: 199;
+
+  @media screen and (min-width: 1920px) {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 50px;
+    width: 1550px;
+  }
 `
 
 export const FooterColumn = styled.div`
