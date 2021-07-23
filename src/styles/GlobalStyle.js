@@ -84,6 +84,7 @@ export const Section = styled.section`
   padding-left: 100px;
   width: calc(100% - 270px);
   height: 100%;
+  background-color: var(--color-background);
   z-index: 2;
 
   @media screen and (min-width: 1920px) {

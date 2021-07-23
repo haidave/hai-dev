@@ -17,6 +17,7 @@ export const AboutMeText = styled(motion.div)`
   }
 
   strong {
+    color: var(--color-red);
     font-weight: 700;
   }
 

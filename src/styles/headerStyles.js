@@ -154,7 +154,7 @@ export const HeaderWrapper = styled.header`
   padding-top: 50px;
   padding-bottom: 50px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: transparent;
+  background-color: var(--color-background);
   z-index: 200;
 
   &::before {

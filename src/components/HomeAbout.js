@@ -19,7 +19,7 @@ const HomeAbout = () => {
         <AboutMeSection className="swiper-no-swiping">
           <AboutMeText>
             Hey, my name is Hai Nguyen but you can call me <strong>Dave</strong>
-            . I'm 25 years old and I live in Prague.
+            . I'm 25&nbsp;years old and I&nbsp;live in Prague.
           </AboutMeText>
           <AboutMeText>
             I'm currently working at Isobar Czech Republic and I'm{" "}
@@ -31,16 +31,16 @@ const HomeAbout = () => {
             >
               dynamic banners
             </a>{" "}
-            and newsletters. I also build websites in <strong>Vue/Nuxt</strong>.
-            After work I have been <strong>learning React</strong> to further my
-            skills. For example I built this portfolio in{" "}
-            <strong>Gatsby</strong>.
+            and newsletters. I&nbsp;also build websites in{" "}
+            <strong>Vue/Nuxt</strong>. After work I&nbsp;have been{" "}
+            <strong>learning React</strong> to further my skills. For example
+            I&nbsp;built this portfolio in <strong>Gatsby</strong>.
           </AboutMeText>
           <AboutMeText>
-            <strong>Right now I'm looking for a new job!</strong>
+            <strong>Right now I'm looking for a&nbsp;new job!</strong>
           </AboutMeText>
           <AboutMeText>
-            Here are a few technologies and tools I've been working with
+            Here are a&nbsp;few technologies and tools I've been working with
             recently:
             <AboutMeStack>
               <li>React, Gatsby, Next*</li>
