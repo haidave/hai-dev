@@ -35,6 +35,10 @@ export const AboutMeText = styled(motion.div)`
 
   @media screen and (min-width: 1920px) {
     font-size: 2rem;
+
+    & + & {
+      margin-top: 2rem;
+    }
   }
 `
 
@@ -54,6 +58,8 @@ export const AboutMeStack = styled.ul`
 
   @media screen and (min-width: 1920px) {
     grid-template-columns: repeat(3, minmax(140px, 280px));
+    margin-top: 2rem;
+    gap: 1rem 2rem;
   }
 
   li {

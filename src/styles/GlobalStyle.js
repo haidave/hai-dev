@@ -99,8 +99,12 @@ export const SectionTitleWrapper = styled.div`
   display: flex;
   align-items: center;
   color: var(--color-white);
-  font-size: 16px;
+  font-size: 1rem;
   overflow: hidden;
+
+  @media screen and (min-width: 1920px) {
+    font-size: 1.25rem;
+  }
 `
 
 export const SectionTitleIndex = styled.div`
@@ -170,6 +174,10 @@ export const StyledLink = styled(Link)`
     color: var(--color-white);
     border-color: var(--color-white);
   }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 1.25rem;
+  }
 `
 
 export const Button = styled.a`
@@ -211,11 +219,19 @@ export const Button = styled.a`
         border-color: var(--color-red);
       }
     `}
+
+  @media screen and (min-width: 1920px) {
+    font-size: 1.25rem;
+  }
 `
 
 export const Divider = styled.div`
   margin-top: 1rem;
   width: 10%;
-  height: 6px;
+  height: 0.5rem;
   background-color: var(--color-red);
+
+  @media screen and (min-width: 1920px) {
+    height: 0.75rem;
+  }
 `

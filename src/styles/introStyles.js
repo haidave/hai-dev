@@ -36,14 +36,14 @@ export const IntroTitle = styled(motion.h1)`
   }
 
   @media screen and (min-width: 1920px) {
-    font-size: 92px;
+    font-size: 6rem;
   }
 `
 
 export const IntroDescription = styled(motion.p)`
   margin-top: 2rem;
   font-family: var(--font-blender-pro);
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--color-white);
 
@@ -52,6 +52,6 @@ export const IntroDescription = styled(motion.p)`
   }
 
   @media screen and (min-width: 1920px) {
-    font-size: 32px;
+    font-size: 2.5rem;
   }
 `

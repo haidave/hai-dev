@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
 
-export const FooterWrapper = styled.header`
+export const FooterWrapper = styled.footer`
   position: fixed;
   bottom: 0;
   display: flex;
@@ -67,4 +67,8 @@ export const FooterText = styled.p`
         border-right: 5px solid var(--color-white);
       }
     `}
+
+    @media screen and (min-width: 1920px) {
+    font-size: 1.25rem;
+  }
 `

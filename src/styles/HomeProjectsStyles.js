@@ -50,6 +50,10 @@ export const HomeProjectLink = styled.a`
     background-color: var(--color-red);
     border-color: var(--color-red);
   }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 1.25rem;
+  }
 `
 
 export const HomeProjectInfo = styled.div`
@@ -116,6 +120,14 @@ export const HomeProjectInfoText = styled.p`
 
   & + & {
     margin-top: 0.5rem;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 1.5rem;
+
+    span {
+      font-size: 1.25rem;
+    }
   }
 `
 export const HomeProjectsGridItem = styled(motion.div)`
