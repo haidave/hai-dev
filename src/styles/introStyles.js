@@ -23,7 +23,7 @@ export const IntroPronunciation = styled.p`
 
 export const IntroTitle = styled(motion.h1)`
   margin-top: 1rem;
-  font-size: 36px;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--color-white);
 
@@ -31,8 +31,12 @@ export const IntroTitle = styled(motion.h1)`
     font-weight: 500;
   }
 
-  @media screen and (min-width: 1280px) {
-    font-size: 60px;
+  @media screen and (min-width: 900px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 4rem;
   }
 
   @media screen and (min-width: 1920px) {
@@ -41,14 +45,19 @@ export const IntroTitle = styled(motion.h1)`
 `
 
 export const IntroDescription = styled(motion.p)`
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   font-family: var(--font-blender-pro);
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--color-white);
 
-  @media screen and (min-width: 1280px) {
-    font-size: 26px;
+  @media screen and (min-width: 900px) {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 1.75rem;
   }
 
   @media screen and (min-width: 1920px) {

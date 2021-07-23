@@ -7,19 +7,23 @@ export const ContactSection = styled.section`
 
 export const ContactTitle = styled.h2`
   color: var(--color-white);
-  font-size: 36px;
+  font-size: 2.5rem;
 
   span {
     color: var(--color-red);
     font-weight: 600;
   }
 
-  @media screen and (min-width: 1280px) {
-    font-size: 60px;
+  @media screen and (min-width: 900px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 4rem;
   }
 
   @media screen and (min-width: 1920px) {
-    font-size: 92px;
+    font-size: 6rem;
   }
 `
 

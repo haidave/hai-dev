@@ -13,6 +13,20 @@ export const FooterWrapper = styled.footer`
   background-color: var(--color-background);
   color: var(--color-white);
   z-index: 199;
+  outline: 1px solid red;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 0;
+    padding-left: 50px;
+    width: calc(100% - 270px);
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-left: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+    width: calc(100% - 370px);
+  }
 
   @media screen and (min-width: 1920px) {
     left: 50%;
@@ -25,7 +39,7 @@ export const FooterWrapper = styled.footer`
 export const FooterColumn = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
 `
 
 export const FooterText = styled.p`
@@ -37,7 +51,12 @@ export const FooterText = styled.p`
   ${props =>
     props.gray &&
     css`
+      display: none;
       color: var(--color-gray-light);
+
+      @media screen and (min-width: 900px) {
+        display: block;
+      }
     `}
 
   ${props =>
@@ -50,6 +69,8 @@ export const FooterText = styled.p`
       &::before,
       &::after {
         content: "";
+        display: none;
+
         position: absolute;
         right: 100%;
         top: calc(50% - 1px);
@@ -66,9 +87,20 @@ export const FooterText = styled.p`
         border-left: 5px solid var(--color-white);
         border-right: 5px solid var(--color-white);
       }
+
+      @media screen and (min-width: 900px) {
+        &::before,
+        &::after {
+          display: block;
+        }
+      }
     `}
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 1.25rem;
   }
 `

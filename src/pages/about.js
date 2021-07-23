@@ -7,8 +7,12 @@ import Seo from "@components/seo"
 import SectionTitle from "@components/SectionTitle"
 
 // styles
-import { Section, SectionContent, StyledLink } from "@styles/GlobalStyle"
-import { Wrapper } from "@styles/wrapperStyles"
+import {
+  Wrapper,
+  Section,
+  SectionContent,
+  StyledLink,
+} from "@styles/GlobalStyle"
 import {
   AboutMeSection,
   AboutMeText,

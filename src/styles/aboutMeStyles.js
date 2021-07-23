@@ -8,12 +8,12 @@ export const AboutMeSection = styled(motion.section)`
 
 export const AboutMeText = styled(motion.div)`
   font-family: var(--font-blender-pro);
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   color: var(--color-white);
 
   & + & {
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
   }
 
   strong {
@@ -29,8 +29,12 @@ export const AboutMeText = styled(motion.div)`
     }
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 1440px) {
     font-size: 1.5rem;
+
+    & + & {
+      margin-top: 1.5rem;
+    }
   }
 
   @media screen and (min-width: 1920px) {
@@ -45,16 +49,21 @@ export const AboutMeText = styled(motion.div)`
 export const AboutMeStack = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, minmax(140px, 200px));
-  gap: 0.5rem 2rem;
+  gap: 0.5rem;
   margin-top: 1rem;
   padding: 0px;
   overflow: hidden;
   list-style: none;
   font-family: var(--font-arame);
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: var(--color-white);
   font-weight: 600;
   text-align: left;
+
+  @media screen and (min-width: 1440px) {
+    gap: 0.5rem 2rem;
+    font-size: 1.25rem;
+  }
 
   @media screen and (min-width: 1920px) {
     grid-template-columns: repeat(3, minmax(140px, 280px));
@@ -78,8 +87,12 @@ export const AboutMeStack = styled.ul`
 
   p {
     font-family: var(--font-blender-pro);
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 400;
     font-style: italic;
+
+    @media screen and (min-width: 1440px) {
+      font-size: 1rem;
+    }
   }
 `

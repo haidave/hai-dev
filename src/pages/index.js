@@ -10,7 +10,7 @@ import HomeProjects from "@components/HomeProjects"
 import HomeContact from "@components/HomeContact"
 
 // styles
-import { Wrapper } from "@styles/wrapperStyles"
+import { Wrapper } from "@styles/GlobalStyle"
 
 // import Swiper styles
 import "swiper/swiper.min.css"

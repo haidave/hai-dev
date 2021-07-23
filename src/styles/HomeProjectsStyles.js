@@ -122,6 +122,14 @@ export const HomeProjectInfoText = styled.p`
     margin-top: 0.5rem;
   }
 
+  @media screen and (min-width: 1440px) {
+    font-size: 1.25rem;
+
+    span {
+      font-size: 1rem;
+    }
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 1.5rem;
 

@@ -78,6 +78,19 @@ const GlobalStyle = createGlobalStyle`
 
 export default GlobalStyle
 
+export const Wrapper = styled.div`
+  height: 100vh;
+  background-color: var(--color-background);
+
+  @media screen and (min-width: 768px) {
+    padding-left: 50px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-left: 100px;
+  }
+`
+
 export const Section = styled.section`
   position: relative;
   padding-right: 100px;
@@ -86,6 +99,17 @@ export const Section = styled.section`
   height: 100%;
   background-color: var(--color-background);
   z-index: 2;
+  outline: 1px solid red;
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% - 320px);
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: calc(100% - 270px);
+  }
 
   @media screen and (min-width: 1920px) {
     margin: 0 auto;
@@ -95,7 +119,7 @@ export const Section = styled.section`
 
 export const SectionTitleWrapper = styled.div`
   position: absolute;
-  top: 55px;
+  top: 3rem;
   display: flex;
   align-items: center;
   color: var(--color-white);
@@ -228,8 +252,12 @@ export const Button = styled.a`
 export const Divider = styled.div`
   margin-top: 1rem;
   width: 10%;
-  height: 0.5rem;
+  height: 0.4rem;
   background-color: var(--color-red);
+
+  @media screen and (min-width: 1440px) {
+    height: 0.5rem;
+  }
 
   @media screen and (min-width: 1920px) {
     height: 0.75rem;

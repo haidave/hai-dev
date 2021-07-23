@@ -28,7 +28,7 @@ $color-blue-dark: #160a2e;
 
   &-bullet {
     position: relative;
-    width: 50px;
+    width: 70px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -37,10 +37,6 @@ $color-blue-dark: #160a2e;
     border-bottom: 1px solid var(--color-blue-dark);
     cursor: pointer;
     z-index: 100;
-
-    @media screen and (min-width: 1280px) {
-      width: 70px;
-    }
 
     &::before,
     &::after {

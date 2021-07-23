@@ -7,7 +7,7 @@ function Footer() {
   return (
     <FooterWrapper>
       <FooterColumn className="swiper-no-swiping">
-        <FooterText>Available for new opportunity</FooterText>
+        <FooterText>Available for new opportunities</FooterText>
       </FooterColumn>
       <FooterColumn className="swiper-no-swiping">
         <FooterText gray>Say hello</FooterText>

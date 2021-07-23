@@ -151,8 +151,8 @@ export const HeaderWrapper = styled.header`
   justify-content: center;
   width: 100px;
   height: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   background-color: var(--color-background);
   z-index: 200;
