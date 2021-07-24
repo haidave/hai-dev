@@ -80,6 +80,7 @@ export default GlobalStyle
 
 export const Wrapper = styled.div`
   height: 100vh;
+  max-height: -webkit-fill-available; // https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
   background-color: var(--color-background);
 
   @media screen and (min-width: 768px) {
@@ -93,10 +94,11 @@ export const Wrapper = styled.div`
 
 export const Section = styled.section`
   position: relative;
-  padding-right: 100px;
-  padding-left: 100px;
-  width: calc(100% - 270px);
-  height: 100%;
+  padding-top: 7rem;
+  padding-right: 25px;
+  padding-left: 25px;
+  width: calc(100% - 100px);
+  height: calc(100% - 7rem - 40px);
   background-color: var(--color-background);
   z-index: 2;
   outline: 1px solid red;
@@ -119,12 +121,20 @@ export const Section = styled.section`
 
 export const SectionTitleWrapper = styled.div`
   position: absolute;
-  top: 3rem;
+  top: 5.5rem;
   display: flex;
   align-items: center;
   color: var(--color-white);
   font-size: 1rem;
   overflow: hidden;
+
+  @media screen and (max-width: 370px) {
+    font-size: 0.75rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 3rem;
+  }
 
   @media screen and (min-width: 1920px) {
     font-size: 1.25rem;
@@ -171,6 +181,11 @@ export const SectionContent = styled.div`
   align-items: center;
   height: 100%;
 
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    height: 100%;
+  }
+
   ${props =>
     props.column &&
     css`
@@ -184,10 +199,11 @@ export const StyledLink = styled(Link)`
   align-self: flex-start;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
-  padding: 15px 30px;
+  margin-top: 1.5rem;
+  padding: 10px 20px;
   background-color: var(--color-white);
   color: var(--color-dark-blue);
+  font-size: 0.75rem;
   border: 1px solid transparent;
   transition: background-color 0.25s ease-out, color 0.25s ease-out,
     border-color 0.25s ease-out;
@@ -197,6 +213,17 @@ export const StyledLink = styled(Link)`
     background-color: transparent;
     color: var(--color-white);
     border-color: var(--color-white);
+  }
+
+  @media screen and (max-width: 370px) {
+    padding: 8px 15px;
+    font-size: 0.6rem;
+  }
+
+  @media screen and (min-width: 600px) {
+    margin-top: 2rem;
+    padding: 15px 30px;
+    font-size: 1rem;
   }
 
   @media screen and (min-width: 1920px) {
@@ -209,10 +236,11 @@ export const Button = styled.a`
   align-self: flex-start;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
-  padding: 15px 30px;
+  margin-top: 1.5rem;
+  padding: 10px 20px;
   background-color: var(--color-white);
   color: var(--color-dark-blue);
+  font-size: 0.75rem;
   text-align: center;
   white-space: nowrap;
   border: 1px solid transparent;
@@ -228,7 +256,7 @@ export const Button = styled.a`
   }
 
   &:first-child {
-    margin-right: 1.5rem;
+    margin-right: 1rem;
   }
 
   ${props =>
@@ -244,6 +272,21 @@ export const Button = styled.a`
       }
     `}
 
+  @media screen and (max-width: 370px) {
+    padding: 8px 15px;
+    font-size: 0.6rem;
+  }
+
+  @media screen and (min-width: 600px) {
+    margin-top: 2rem;
+    padding: 15px 30px;
+    font-size: 1rem;
+
+    &:first-child {
+      margin-right: 1.5rem;
+    }
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 1.25rem;
   }
@@ -251,9 +294,14 @@ export const Button = styled.a`
 
 export const Divider = styled.div`
   margin-top: 1rem;
-  width: 10%;
-  height: 0.4rem;
+  width: 15%;
+  height: 0.3rem;
   background-color: var(--color-red);
+
+  @media screen and (min-width: 600px) {
+    width: 10%;
+    height: 0.4rem;
+  }
 
   @media screen and (min-width: 1440px) {
     height: 0.5rem;

@@ -31,6 +31,10 @@ export const IntroTitle = styled(motion.h1)`
     font-weight: 500;
   }
 
+  @media screen and (max-width: 370px) {
+    font-size: 2rem;
+  }
+
   @media screen and (min-width: 900px) {
     font-size: 3rem;
   }
@@ -50,6 +54,10 @@ export const IntroDescription = styled(motion.p)`
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--color-white);
+
+  @media screen and (max-width: 370px) {
+    font-size: 1rem;
+  }
 
   @media screen and (min-width: 900px) {
     margin-top: 2rem;

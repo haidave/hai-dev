@@ -14,6 +14,10 @@ export const ContactTitle = styled.h2`
     font-weight: 600;
   }
 
+  @media screen and (max-width: 370px) {
+    font-size: 2rem;
+  }
+
   @media screen and (min-width: 900px) {
     font-size: 3rem;
   }

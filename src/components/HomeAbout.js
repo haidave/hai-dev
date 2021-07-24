@@ -16,7 +16,7 @@ const HomeAbout = () => {
     <Section>
       <SectionTitle index={"02"} name={"About me"} />
       <SectionContent>
-        <AboutMeSection className="swiper-no-swiping">
+        <AboutMeSection>
           <AboutMeText>
             Hey, my name is Hai Nguyen but you can call me <strong>Dave</strong>
             . I'm 25&nbsp;years old and I&nbsp;live in Prague.

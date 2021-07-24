@@ -6,24 +6,20 @@ export const FooterWrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 100px;
-  padding-right: 100px;
-  padding-left: 100px;
-  width: calc(100% - 370px);
+  padding-left: 25px;
+  width: calc(100% - 100px);
   background-color: var(--color-background);
   color: var(--color-white);
-  z-index: 199;
-  outline: 1px solid red;
+  z-index: 150;
 
   @media screen and (min-width: 768px) {
+    margin-left: 100px;
     padding-right: 0;
     padding-left: 50px;
     width: calc(100% - 270px);
   }
 
   @media screen and (min-width: 1440px) {
-    margin-left: 100px;
-    padding-right: 100px;
     padding-left: 100px;
     width: calc(100% - 370px);
   }
@@ -32,6 +28,7 @@ export const FooterWrapper = styled.footer`
     left: 50%;
     transform: translateX(-50%);
     margin-left: 50px;
+    padding-right: 100px;
     width: 1550px;
   }
 `
@@ -39,11 +36,16 @@ export const FooterWrapper = styled.footer`
 export const FooterColumn = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 3rem;
+  }
 `
 
 export const FooterText = styled.p`
   font-family: var(--font-blender-pro);
+  font-size: 0.75rem;
   font-weight: 900;
   text-transform: uppercase;
   color: var(--color-white);
@@ -63,14 +65,12 @@ export const FooterText = styled.p`
     props.divider &&
     css`
       position: relative;
-      margin-left: 80px;
       padding-left: 30px;
 
       &::before,
       &::after {
         content: "";
         display: none;
-
         position: absolute;
         right: 100%;
         top: calc(50% - 1px);
@@ -89,6 +89,7 @@ export const FooterText = styled.p`
       }
 
       @media screen and (min-width: 900px) {
+        margin-left: 80px;
         &::before,
         &::after {
           display: block;
@@ -96,7 +97,7 @@ export const FooterText = styled.p`
       }
     `}
 
-    @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 1rem;
   }
 

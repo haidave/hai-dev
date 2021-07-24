@@ -17,17 +17,17 @@ const Intro = () => {
     <Section>
       <SectionTitle index={"01"} name={"Welcome"} />
       <SectionContent>
-        <IntroSection className="swiper-no-swiping">
+        <IntroSection>
           <IntroPronunciation>
             <span>/haːj˧˩/ /ŋwiən˦ˀ˥/</span>
             <span>/deɪv/</span>
           </IntroPronunciation>
           <IntroTitle animate={{ y: 0 }} initial="{{y: 100}}">
-            Hai Nguyen / <span>Dave</span>
+            Hai Nguyen /&nbsp;<span>Dave</span>
           </IntroTitle>
           <Divider />
           <IntroDescription>
-            The frontend developer based in Prague
+            The frontend developer based in&nbsp;Prague
           </IntroDescription>
         </IntroSection>
       </SectionContent>

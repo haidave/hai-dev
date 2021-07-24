@@ -16,11 +16,11 @@ const HomeContact = () => {
     <Section>
       <SectionTitle index={"04"} name={"Get in touch"} />
       <SectionContent>
-        <ContactSection className="swiper-no-swiping">
+        <ContactSection>
           <ContactTitle>
             <span>Interested?</span>
           </ContactTitle>
-          <ContactTitle>Lets get in touch!</ContactTitle>
+          <ContactTitle>Lets get in&nbsp;touch!</ContactTitle>
           <Divider />
           <ContactButtons>
             <Button

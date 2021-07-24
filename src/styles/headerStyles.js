@@ -10,6 +10,16 @@ const headerLine = keyframes`
     }
 `
 
+const headerLineMobile = keyframes`
+  0% {
+      transform: translateX(100vw)
+    }
+
+    100% {
+      transform: translateX(-30px)
+    }
+`
+
 const glitchAnimationOne = keyframes`
    0% {
     clip-path: inset(0);
@@ -143,29 +153,56 @@ const glitchAnimationTwo = keyframes`
 `
 
 export const HeaderWrapper = styled.header`
-  grid-area: header;
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
-  justify-content: center;
-  width: 100px;
-  height: 100%;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+  padding-right: 25px;
+  padding-left: 25px;
+  width: calc(100% - 50px);
+  height: 3.5rem;
   background-color: var(--color-background);
   z-index: 200;
+  border-bottom: 1px solid var(--color-blue-dark);
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: -1px;
-    width: 1px;
-    height: 20px;
+    bottom: -1px;
+    left: -1px;
+    width: 20px;
+    height: 1px;
     background-color: #ffffff;
-    animation: 5s cubic-bezier(0.4, 0.25, 0, 1) infinite forwards ${headerLine};
+    animation: 5s cubic-bezier(0.4, 0.25, 0, 1) infinite forwards
+      ${headerLineMobile};
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100px;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -1px;
+      bottom: auto;
+      left: auto;
+      width: 1px;
+      height: 20px;
+      background-color: #ffffff;
+      animation: 5s cubic-bezier(0.4, 0.25, 0, 1) infinite forwards
+        ${headerLine};
+    }
   }
 `
 
@@ -173,8 +210,8 @@ export const HeaderLogo = styled.div`
   a {
     display: block;
     position: relative;
-    color: #ffffff;
-    font-size: 60px;
+    color: var(--color-white);
+    font-size: 2.5rem;
     font-weight: 500;
     transition: color 0.25s ease-in;
     will-change: color;
@@ -209,6 +246,10 @@ export const HeaderLogo = styled.div`
     &::after {
       text-shadow: -1px 0 #0e0520;
       animation: 5s linear infinite forwards ${glitchAnimationTwo};
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 4rem;
     }
   }
 `
