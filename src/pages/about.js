@@ -41,8 +41,8 @@ const About = () => {
           mousewheel={true}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <Section>
+          <SwiperSlide style={{ overflowY: "scroll" }}>
+            <Section scrollable>
               <SectionTitle index={"About me"} />
               <SectionContent>
                 <AboutMeSection className="swiper-no-swiping">

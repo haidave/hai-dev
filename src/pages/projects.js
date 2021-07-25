@@ -17,6 +17,12 @@ import {
 } from "@styles/GlobalStyle"
 import {
   HomeProjectsSection,
+  HomeProjectsCarousel,
+  HomeProjectsCarouselItem,
+  HomeProjectCarouselImage,
+  HomeProjectCarouselInfo,
+  HomeProjectCarouselInfoText,
+  HomeProjectCarouselLink,
   HomeProjectsGrid,
   HomeProjectsGridItem,
   HomeProjectImage,
@@ -29,10 +35,10 @@ import {
 import "swiper/swiper.min.css"
 
 // import Swiper core and required modules
-import SwiperCore, { Scrollbar, Mousewheel } from "swiper/core"
+import SwiperCore, { Scrollbar, Mousewheel, Pagination } from "swiper/core"
 
 // install Swiper modules
-SwiperCore.use([Scrollbar, Mousewheel])
+SwiperCore.use([Scrollbar, Mousewheel, Pagination])
 
 export const query = graphql`
   query PageProjects {
@@ -65,6 +71,19 @@ export const query = graphql`
 const Projects = ({ data }) => {
   const myProjects = data.myProjects.nodes
 
+  const carouselPagination = {
+    el: ".carousel-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return (
+        '<span class="' +
+        className +
+        ' carousel-pagination__bullet">' +
+        "</span>"
+      )
+    },
+  }
+
   return (
     <Layout>
       <Seo title="projects" />
@@ -77,11 +96,50 @@ const Projects = ({ data }) => {
           mousewheel={true}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <Section>
+          <SwiperSlide style={{ overflowY: "scroll" }}>
+            <Section scrollable>
               <SectionTitle index={"Projects I worked on"} />
               <SectionContent>
-                <HomeProjectsSection className="swiper-no-swiping">
+                <HomeProjectsSection>
+                  <HomeProjectsCarousel page>
+                    <Swiper
+                      pagination={carouselPagination}
+                      className="carousel-swiper"
+                    >
+                      {myProjects.map(project => (
+                        <SwiperSlide key={project.id}>
+                          <HomeProjectsCarouselItem>
+                            <HomeProjectCarouselImage>
+                              <GatsbyImage
+                                image={getImage(
+                                  project.frontmatter.image.childImageSharp
+                                    .gatsbyImageData
+                                )}
+                                alt={project.frontmatter.title}
+                                className="project__image"
+                              />
+                            </HomeProjectCarouselImage>
+                            <HomeProjectCarouselLink
+                              href={project.frontmatter.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Visit site
+                            </HomeProjectCarouselLink>
+                            <HomeProjectCarouselInfo>
+                              <HomeProjectCarouselInfoText>
+                                {project.frontmatter.description}
+                              </HomeProjectCarouselInfoText>
+                              <HomeProjectCarouselInfoText>
+                                <span> {project.frontmatter.stack}</span>
+                              </HomeProjectCarouselInfoText>
+                            </HomeProjectCarouselInfo>
+                          </HomeProjectsCarouselItem>
+                        </SwiperSlide>
+                      ))}
+                      <div className="carousel-pagination"></div>
+                    </Swiper>
+                  </HomeProjectsCarousel>
                   <HomeProjectsGrid projectPage>
                     {myProjects.map(project => (
                       <HomeProjectsGridItem key={project.id}>
@@ -99,15 +157,15 @@ const Projects = ({ data }) => {
                           href={project.frontmatter.link}
                           target="_blank"
                           rel="noopener noreferrer"
+                          page
                         >
                           Visit site
                         </HomeProjectLink>
-
-                        <HomeProjectInfo>
-                          <HomeProjectInfoText>
+                        <HomeProjectInfo page>
+                          <HomeProjectInfoText page>
                             {project.frontmatter.description}
                           </HomeProjectInfoText>
-                          <HomeProjectInfoText>
+                          <HomeProjectInfoText page>
                             <span> {project.frontmatter.stack}</span>
                           </HomeProjectInfoText>
                         </HomeProjectInfo>

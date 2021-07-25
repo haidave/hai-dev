@@ -6,21 +6,6 @@ export const IntroSection = styled.section`
   flex-direction: column;
 `
 
-export const IntroPronunciation = styled.p`
-  display: flex;
-  justify-content: space-between;
-  padding: 4px;
-  background-color: var(--color-white);
-  color: var(--color-blue-dark);
-  font-size: 14px;
-  overflow: hidden;
-  display: none;
-
-  @media screen and (min-width: 1920px) {
-    font-size: 16px;
-  }
-`
-
 export const IntroTitle = styled(motion.h1)`
   margin-top: 1rem;
   font-size: 2.5rem;

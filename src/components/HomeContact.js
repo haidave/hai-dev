@@ -20,7 +20,7 @@ const HomeContact = () => {
           <ContactTitle>
             <span>Interested?</span>
           </ContactTitle>
-          <ContactTitle>Lets get in&nbsp;touch!</ContactTitle>
+          <ContactTitle>Let's get in&nbsp;touch!</ContactTitle>
           <Divider />
           <ContactButtons>
             <Button

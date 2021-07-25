@@ -101,7 +101,6 @@ export const Section = styled.section`
   height: calc(100% - 7rem - 40px);
   background-color: var(--color-background);
   z-index: 2;
-  outline: 1px solid red;
 
   @media screen and (min-width: 768px) {
     width: calc(100% - 320px);
@@ -117,6 +116,24 @@ export const Section = styled.section`
     margin: 0 auto;
     width: 1550px;
   }
+
+  ${props =>
+    props.scrollable &&
+    css`
+      @media screen and (min-width: 320px) {
+        width: calc(100% - 50px);
+        height: auto;
+        padding-bottom: 7rem;
+      }
+
+      @media screen and (min-width: 768px) {
+        width: calc(100% - 150px);
+      }
+
+      @media screen and (min-width: 1440px) {
+        width: calc(100% - 250px);
+      }
+    `}
 `
 
 export const SectionTitleWrapper = styled.div`
