@@ -18,12 +18,13 @@ const HomeAbout = () => {
       <SectionContent>
         <AboutMeSection>
           <AboutMeText>
-            Hey, my name is Hai Nguyen but you can call me <strong>Dave</strong>
-            . I'm 25&nbsp;years old and I&nbsp;live in Prague.
+            Hey, my name is Hai Nguyen, but you can call me{" "}
+            <strong>Dave</strong>. I'm 25&nbsp;years old and I&nbsp;live
+            in&nbsp;Prague.
           </AboutMeText>
           <AboutMeText>
-            I'm currently working at Isobar Czech Republic and I'm{" "}
-            <strong>in charge of campaign assets</strong> such as{" "}
+            Currently I'm working at <strong>Isobar Czech Republic</strong>{" "}
+            where I'm <strong>in charge of campaign assets</strong> such as{" "}
             <a
               href="https://mam.cz/zpravy/2021-05/metrozoom-vytvoril-pro-sazkabet-prvni-dynamickou-ooh-reklamu-v-cesku/"
               target="_blank"
@@ -31,10 +32,10 @@ const HomeAbout = () => {
             >
               dynamic banners
             </a>{" "}
-            and newsletters. I&nbsp;also build websites in{" "}
-            <strong>Vue/Nuxt</strong>. After work I&nbsp;have been{" "}
-            <strong>learning React</strong> to further my skills. For example
-            I&nbsp;built this portfolio in <strong>Gatsby</strong>.
+            or newsletters and I&nbsp;also build websites in{" "}
+            <strong>Vue/Nuxt</strong>. After work I&nbsp;have been learning{" "}
+            <strong>React</strong> to further my skills. As an example of that,
+            I&nbsp;built this portfolio in&nbsp;<strong>Gatsby</strong>.
           </AboutMeText>
           <AboutMeText>
             <strong>Right now I'm looking for a&nbsp;new job!</strong>
@@ -47,7 +48,7 @@ const HomeAbout = () => {
               <li>Vue, Nuxt</li>
               <li>BEM, SCSS, Styled&nbsp;Components</li>
               <li>GSAP, Framer&nbsp;Motion</li>
-              <li>Git, Bitbucket, Github</li>
+              <li>Netlify, Bitbucket, Github</li>
               <li>Photoshop, Sketch, Figma</li>
               <p>*still learning</p>
             </AboutMeStack>

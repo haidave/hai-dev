@@ -33,4 +33,8 @@ export const ContactTitle = styled.h2`
 
 export const ContactButtons = styled.div`
   display: flex;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `

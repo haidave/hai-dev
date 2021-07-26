@@ -3,11 +3,8 @@ import styled, { css } from "styled-components"
 export const FooterWrapper = styled.footer`
   position: fixed;
   bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding-left: 25px;
-  width: calc(100% - 100px);
+  width: 100%;
   background-color: var(--color-background);
   color: var(--color-white);
   z-index: 150;
@@ -16,19 +13,34 @@ export const FooterWrapper = styled.footer`
     margin-left: 100px;
     padding-right: 0;
     padding-left: 50px;
-    width: calc(100% - 270px);
   }
 
   @media screen and (min-width: 1440px) {
     padding-left: 100px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    margin-left: 50px;
+    padding-left: 0;
+  }
+`
+
+export const FooterContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 100px);
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% - 270px);
+  }
+
+  @media screen and (min-width: 1440px) {
     width: calc(100% - 370px);
   }
 
   @media screen and (min-width: 1920px) {
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 50px;
-    padding-right: 100px;
+    margin: 0 auto;
     width: 1550px;
   }
 `

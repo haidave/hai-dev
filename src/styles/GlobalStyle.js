@@ -217,7 +217,8 @@ export const StyledLink = styled(Link)`
   align-items: center;
   justify-content: center;
   margin-top: 1.5rem;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  width: calc(100% - 50px);
   background-color: var(--color-white);
   color: var(--color-dark-blue);
   font-size: 0.75rem;
@@ -232,14 +233,10 @@ export const StyledLink = styled(Link)`
     border-color: var(--color-white);
   }
 
-  @media screen and (max-width: 370px) {
-    padding: 8px 15px;
-    font-size: 0.6rem;
-  }
-
   @media screen and (min-width: 600px) {
     margin-top: 2rem;
     padding: 15px 30px;
+    width: auto;
     font-size: 1rem;
   }
 
@@ -254,7 +251,8 @@ export const Button = styled.a`
   align-items: center;
   justify-content: center;
   margin-top: 1.5rem;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  width: calc(100% - 50px);
   background-color: var(--color-white);
   color: var(--color-dark-blue);
   font-size: 0.75rem;
@@ -272,10 +270,6 @@ export const Button = styled.a`
     border-color: var(--color-white);
   }
 
-  &:first-child {
-    margin-right: 1rem;
-  }
-
   ${props =>
     props.secondary &&
     css`
@@ -289,14 +283,10 @@ export const Button = styled.a`
       }
     `}
 
-  @media screen and (max-width: 370px) {
-    padding: 8px 15px;
-    font-size: 0.6rem;
-  }
-
   @media screen and (min-width: 600px) {
     margin-top: 2rem;
     padding: 15px 30px;
+    width: auto;
     font-size: 1rem;
 
     &:first-child {

@@ -332,5 +332,6 @@ export const HomeProjectsGridItem = styled(motion.div)`
 `
 export const HomeProjectsButton = styled.div`
   position: relative;
+  width: 100%;
   z-index: 100;
 `
