@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `hai`,
-    description: `frontend developer`,
+    title: `hai.dev`,
+    description: `frontend developer based in Prague who is looking for a new challenge right now`,
+    image: "/hai-dev-icon.png", // Path to your image you placed in the 'static' folder
     author: `@haidave`,
   },
   plugins: [
@@ -35,13 +36,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `hai.dev | frontend developer`,
+        short_name: `hai.dev`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#0e0520`,
+        theme_color: `#0e0520`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images//hai-dev-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
