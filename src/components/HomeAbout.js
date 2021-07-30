@@ -38,7 +38,7 @@ const HomeAbout = () => {
             I&nbsp;built this portfolio in&nbsp;<strong>Gatsby</strong>.
           </AboutMeText>
           <AboutMeText>
-            <strong>Right now I'm looking for a&nbsp;new job!</strong>
+            <strong>Right now I'm looking for a&nbsp;new challenge!</strong>
           </AboutMeText>
           <AboutMeText>
             Here are a&nbsp;few technologies and tools I've been working with
@@ -48,7 +48,7 @@ const HomeAbout = () => {
               <li>Vue, Nuxt</li>
               <li>BEM, SCSS, Styled&nbsp;Components</li>
               <li>GSAP, Framer&nbsp;Motion</li>
-              <li>Netlify, Bitbucket, Github</li>
+              <li>Git, Netlify, Jira</li>
               <li>Photoshop, Sketch, Figma</li>
               <p>*still learning</p>
             </AboutMeStack>

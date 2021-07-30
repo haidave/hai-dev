@@ -62,7 +62,7 @@ export const AboutMeText = styled(motion.div)`
 export const AboutMeStack = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, minmax(120px, 200px));
-  gap: 0.4rem 2rem;
+  gap: 0.4rem 1.5rem;
   margin-top: 1rem;
   padding: 0px;
   overflow: hidden;

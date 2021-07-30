@@ -98,7 +98,7 @@ const About = () => {
                       <li>Vue, Nuxt</li>
                       <li>BEM, SCSS, Styled&nbsp;Components</li>
                       <li>GSAP, Framer&nbsp;Motion</li>
-                      <li>Netlify, Bitbucket, Github</li>
+                      <li>Git, Netlify, Jira</li>
                       <li>Photoshop, Sketch, Figma</li>
                       <p>*still learning</p>
                     </AboutMeStack>

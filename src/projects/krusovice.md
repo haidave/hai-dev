@@ -1,5 +1,5 @@
 ---
-id: 8
+id: 2
 title: Krušovice contest
 description: Contest website for Krušovice.
 stack: HTML/CSS, Laravel

@@ -153,14 +153,16 @@ const Projects = ({ data }) => {
                             className="project__image"
                           />
                         </HomeProjectImage>
-                        <HomeProjectLink
-                          href={project.frontmatter.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          page
-                        >
-                          Visit site
-                        </HomeProjectLink>
+                        {project.frontmatter.link && (
+                          <HomeProjectLink
+                            href={project.frontmatter.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            page
+                          >
+                            Visit site
+                          </HomeProjectLink>
+                        )}
                         <HomeProjectInfo page>
                           <HomeProjectInfoText page>
                             {project.frontmatter.description}

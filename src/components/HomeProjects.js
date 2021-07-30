@@ -134,13 +134,16 @@ const HomeProjects = () => {
                       className="project__image"
                     />
                   </HomeProjectImage>
-                  <HomeProjectLink
-                    href={project.frontmatter.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Visit site
-                  </HomeProjectLink>
+                  {project.frontmatter.link && (
+                    <HomeProjectLink
+                      href={project.frontmatter.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      page
+                    >
+                      Visit site
+                    </HomeProjectLink>
+                  )}
                   <HomeProjectInfo>
                     <HomeProjectInfoText>
                       {project.frontmatter.description}
