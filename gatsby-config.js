@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `hai.dev`,
     description: `frontend developer based in Prague who is looking for a new challenge right now`,
-    image: "/hai-dev-icon.png", // Path to your image you placed in the 'static' folder
+    image: "/hai-dev-og.png", // Path to your image you placed in the 'static' folder
     author: `@haidave`,
   },
   plugins: [
