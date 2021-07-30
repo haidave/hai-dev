@@ -30,8 +30,13 @@ const HomeContact = () => {
             >
               LinkedIn
             </Button>
-            <Button href="mailto:hello@hai.dev" secondary>
-              Say Hello
+            <Button
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              secondary
+            >
+              Resume
             </Button>
           </ContactButtons>
         </ContactSection>
