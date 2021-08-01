@@ -7,12 +7,7 @@ import Seo from "@components/seo"
 import SectionTitle from "@components/SectionTitle"
 
 // styles
-import {
-  Wrapper,
-  Section,
-  SectionContent,
-  StyledLink,
-} from "@styles/GlobalStyle"
+import { Wrapper, Section, SectionContent, Button } from "@styles/GlobalStyle"
 import {
   AboutMeSection,
   AboutMeText,
@@ -108,7 +103,7 @@ const About = () => {
                     Oh and I can also speak Czech, English and Vietnamese.
                   </AboutMeText>
 
-                  <StyledLink to="/#about-me">Back</StyledLink>
+                  <Button href="/#about-me">Back</Button>
                 </AboutMeSection>
               </SectionContent>
             </Section>

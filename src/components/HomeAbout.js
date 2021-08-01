@@ -4,7 +4,7 @@ import React from "react"
 import SectionTitle from "@components/SectionTitle"
 
 // styles
-import { Section, SectionContent, StyledLink } from "@styles/GlobalStyle"
+import { Section, SectionContent, Button } from "@styles/GlobalStyle"
 import {
   AboutMeSection,
   AboutMeText,
@@ -57,7 +57,7 @@ const HomeAbout = () => {
             </AboutMeText>
           </div>
           <div className="button">
-            <StyledLink to="/about">More about me</StyledLink>
+            <Button href="/about">More about me</Button>
           </div>
         </AboutMeSection>
       </SectionContent>

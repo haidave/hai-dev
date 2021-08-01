@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import SectionTitle from "@components/SectionTitle"
 
 // styles
-import { Section, SectionContent, StyledLink } from "@styles/GlobalStyle"
+import { Section, SectionContent, Button } from "@styles/GlobalStyle"
 import {
   HomeProjectsSection,
   HomeProjectsCarousel,
@@ -160,7 +160,7 @@ const HomeProjects = () => {
           </HomeProjectsGrid>
         </HomeProjectsSection>
         <HomeProjectsButton className="button">
-          <StyledLink to="/projects">More projects</StyledLink>
+          <Button href="/projects">More projects</Button>
         </HomeProjectsButton>
       </SectionContent>
     </Section>
