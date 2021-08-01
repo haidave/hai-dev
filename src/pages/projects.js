@@ -103,7 +103,7 @@ const Projects = ({ data }) => {
                     >
                       {myProjects.map(project => (
                         <SwiperSlide key={project.id}>
-                          <HomeProjectsCarouselItem>
+                          <HomeProjectsCarouselItem className="project__item">
                             <HomeProjectCarouselImage>
                               <GatsbyImage
                                 image={getImage(
@@ -137,7 +137,10 @@ const Projects = ({ data }) => {
                   </HomeProjectsCarousel>
                   <HomeProjectsGrid projectPage>
                     {myProjects.map(project => (
-                      <HomeProjectsGridItem key={project.id}>
+                      <HomeProjectsGridItem
+                        key={project.id}
+                        className="project__item"
+                      >
                         <HomeProjectImage>
                           <GatsbyImage
                             image={getImage(
@@ -169,7 +172,9 @@ const Projects = ({ data }) => {
                       </HomeProjectsGridItem>
                     ))}
                   </HomeProjectsGrid>
-                  <Button href="/#projects">Back</Button>
+                  <div className="button">
+                    <Button href="/#projects">Back</Button>
+                  </div>
                 </HomeProjectsSection>
               </SectionContent>
             </Section>
