@@ -1,16 +1,16 @@
 import styled from "styled-components"
-import { motion } from "framer-motion"
 
 export const IntroSection = styled.section`
   display: flex;
   flex-direction: column;
 `
 
-export const IntroTitle = styled(motion.h1)`
+export const IntroTitle = styled.h1`
   margin-top: 1rem;
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--color-white);
+  overflow: hidden;
 
   span {
     font-weight: 500;
@@ -33,7 +33,7 @@ export const IntroTitle = styled(motion.h1)`
   }
 `
 
-export const IntroDescription = styled(motion.p)`
+export const IntroDescription = styled.p`
   margin-top: 1.5rem;
   font-family: var(--font-blender-pro);
   font-size: 1.25rem;

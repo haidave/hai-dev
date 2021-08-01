@@ -17,27 +17,36 @@ const HomeContact = () => {
       <SectionTitle index={"04"} name={"Get in touch"} />
       <SectionContent>
         <ContactSection>
-          <ContactTitle>
-            <span>Interested?</span>
-          </ContactTitle>
-          <ContactTitle>Let's get in&nbsp;touch!</ContactTitle>
-          <Divider />
+          <div className="contact__title">
+            <strong>
+              <ContactTitle>
+                <span>Interested?</span>
+              </ContactTitle>
+              <ContactTitle>Let's get in&nbsp;touch!</ContactTitle>
+            </strong>
+          </div>
+          <Divider className="divider" />
           <ContactButtons>
-            <Button
-              href="https://www.linkedin.com/in/iamhai/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </Button>
-            <Button
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              secondary
-            >
-              Resume
-            </Button>
+            <div className="contact__button contact__button--linkedin">
+              <Button
+                href="https://www.linkedin.com/in/iamhai/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </Button>
+            </div>
+
+            <div className="contact__button contact__button--resume">
+              <Button
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                secondary
+              >
+                Resume
+              </Button>
+            </div>
           </ContactButtons>
         </ContactSection>
       </SectionContent>

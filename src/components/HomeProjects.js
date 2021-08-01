@@ -87,7 +87,7 @@ const HomeProjects = () => {
                 .filter((item, id) => id < 4)
                 .map(project => (
                   <SwiperSlide key={project.id}>
-                    <HomeProjectsCarouselItem>
+                    <HomeProjectsCarouselItem className="project__item">
                       <HomeProjectCarouselImage>
                         <GatsbyImage
                           image={getImage(
@@ -123,7 +123,10 @@ const HomeProjects = () => {
             {projects
               .filter((item, id) => id < 4)
               .map(project => (
-                <HomeProjectsGridItem key={project.id}>
+                <HomeProjectsGridItem
+                  key={project.id}
+                  className="project__item"
+                >
                   <HomeProjectImage>
                     <GatsbyImage
                       image={getImage(
@@ -156,7 +159,7 @@ const HomeProjects = () => {
               ))}
           </HomeProjectsGrid>
         </HomeProjectsSection>
-        <HomeProjectsButton>
+        <HomeProjectsButton className="button">
           <StyledLink to="/projects">More projects</StyledLink>
         </HomeProjectsButton>
       </SectionContent>

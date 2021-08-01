@@ -2,6 +2,7 @@ import styled, { createGlobalStyle, css } from "styled-components"
 import { normalize } from "styled-normalize"
 import fonts from "./fonts"
 import variables from "./variables"
+import "@styles/animations.scss"
 
 import { Link } from "gatsby"
 

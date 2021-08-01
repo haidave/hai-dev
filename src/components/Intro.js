@@ -13,11 +13,13 @@ const Intro = () => {
       <SectionTitle index={"01"} name={"Welcome"} />
       <SectionContent>
         <IntroSection>
-          <IntroTitle animate={{ y: 0 }} initial="{{y: 100}}">
-            Hai Nguyen /&nbsp;<span>Dave</span>
+          <IntroTitle className="intro__title">
+            <strong>
+              Hai Nguyen /&nbsp;<span>Dave</span>
+            </strong>
           </IntroTitle>
-          <Divider />
-          <IntroDescription>
+          <Divider className="divider" />
+          <IntroDescription className="intro__description">
             Frontend developer based in&nbsp;Prague
           </IntroDescription>
         </IntroSection>

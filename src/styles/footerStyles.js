@@ -62,6 +62,15 @@ export const FooterText = styled.p`
   text-transform: uppercase;
   color: var(--color-white);
 
+  a {
+    transition: color 0.25s ease-in-out;
+    will-change: color;
+
+    &:hover {
+      color: var(--color-red);
+    }
+  }
+
   ${props =>
     props.gray &&
     css`
